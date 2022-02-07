@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.layout {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding-left: 250px;
+    padding-right: 250px;
+    background-color: rgb(56, 56, 56);
+}
+
+.navLink {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navLink:hover {
+    text-decoration: underline;
+    color: rgb(32, 110, 173);
+}
+
+main {
+    background-color: rgb(234, 239, 243);
+    height: 100vh;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+    background-color: #fff;
+}
