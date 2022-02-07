@@ -6,6 +6,7 @@ import { TodoList } from './components/Todo/TodoList/TodoList';
 
 function App() {
   const [text, setText] = useState()
+  console.log("test 2")
 
   return (
     <Routes>
