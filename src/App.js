@@ -1,17 +1,14 @@
-import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import classes from'./App.module.css';
+import { Counter } from './components/CountsProjects/Counter';
 import { Layout } from './components/Layout/Layout';
-import { TodoList } from './components/Todo/TodoList/TodoList';
+import { TodoList } from './components/TodosProject/Todo/TodoList/TodoList';
 
 function App() {
-  const [text, setText] = useState()
-  console.log("test 4")
-
   return (
     <Routes>
       <Route path='/' element={<Layout />}>
-        <Route path='/todos' element={<TodoList text={text}/>}/>
+        <Route path='/todos' element={<TodoList />}/>
+        <Route path='/count' element={<Counter />}/>
       </Route>
     </Routes>
   );

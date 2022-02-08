@@ -6,9 +6,9 @@ const Layout = () => {
   return (
     <div className={classes.layout}>
       <header className={classes.header}>
-        <NavLink className={classes.navLink} to='/'>Home</NavLink>
+        <NavLink className={classes.navLink} to={'/'}>Home</NavLink>
         <NavLink className={classes.navLink} to={'/todos'}>Todos</NavLink>
-        <NavLink className={classes.navLink} to={'/about'}>About</NavLink>
+        <NavLink className={classes.navLink} to={'/count'}>Count</NavLink>
       </header>
 
       <main>
