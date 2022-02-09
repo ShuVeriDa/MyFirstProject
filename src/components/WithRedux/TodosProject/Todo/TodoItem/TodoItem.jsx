@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { removeTodo, toggleTodoComplete } from "../../../../store/todoSlice";
+import { removeTodo, toggleTodoComplete } from "../../../../../store/todoSlice";
 
 import classes from './TodoItem.module.css'
 

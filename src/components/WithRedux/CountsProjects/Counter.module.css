@@ -1,0 +1,10 @@
+.Counter h1 {
+    color: #000;
+}
+
+.Counter button {
+    display: inline-block;
+    padding: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+}

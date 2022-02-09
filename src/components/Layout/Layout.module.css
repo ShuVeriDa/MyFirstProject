@@ -10,6 +10,10 @@
     max-width: 1000px;
 }
 
+.layout h1 {
+    color: #fff;
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -32,15 +36,22 @@
 
 main {
     background-color: rgb(234, 239, 243);
-    height: 100vh;
+    height: 75vh;
     padding: 25px 0;
 }
 
 footer {
     position: relative;
     bottom: 0;
-    height: 50px;
-    line-height: 50px;
+}
+
+.footer__inner {
+    height: 100px;
+    line-height: 100px;
     display: flex;
-    background-color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 250px;
+    padding-right: 250px;
+    background-color: rgb(56, 56, 56);
 }

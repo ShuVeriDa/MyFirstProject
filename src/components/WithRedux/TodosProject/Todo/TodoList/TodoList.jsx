@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import classes from './TodoList.module.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { InputField } from '../../InputField/InputField';
-import { addTodo } from '../../../../store/todoSlice';
 import { TodoItem } from '../TodoItem/TodoItem';
+import { addTodo } from '../../../../../store/todoSlice';
+
+
 
 const TodoList = ({removeTodo, toggleTodoComplete}) => {
   const todos = useSelector( state => state.todos.todos)
@@ -27,7 +29,7 @@ const TodoList = ({removeTodo, toggleTodoComplete}) => {
         <ul>
           {
             todos.map(todo => (
-              <TodoItem 
+              <TodoItem                
                 key={todo.id} 
                 removeTodo={removeTodo} 
                 toggleTodoComplete={toggleTodoComplete} 
