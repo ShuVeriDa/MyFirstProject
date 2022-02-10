@@ -18,10 +18,11 @@ const Layout = () => {
 
       <footer className={classes.footer}>
         <div className={classes.footer__inner}>
-          <h1>Without Redux</h1>
-          <NavLink className={classes.navLink} to={'/2'}>Home</NavLink>
+          <h1>With Hooks</h1>
+          <NavLink className={classes.navLink} to={'/'}>Home</NavLink>
           <NavLink className={classes.navLink} to={'/todos2'}>Todos</NavLink>
           <NavLink className={classes.navLink} to={'/count2'}>Count</NavLink>
+          <NavLink className={classes.navLink} to={'/forPractice'}>forPractice</NavLink>
         </div>
       </footer>
     </div>
