@@ -51,7 +51,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 250px;
-    padding-right: 250px;
+    padding-left: 25px;
+    padding-right: 25px;
     background-color: rgb(56, 56, 56);
 }

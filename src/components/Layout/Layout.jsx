@@ -22,6 +22,7 @@ const Layout = () => {
           <NavLink className={classes.navLink} to={'/'}>Home</NavLink>
           <NavLink className={classes.navLink} to={'/todos2'}>Todos</NavLink>
           <NavLink className={classes.navLink} to={'/count2'}>Count</NavLink>
+          <NavLink className={classes.navLink} to={'/dinamicForms'}>DinamicForms</NavLink>
           <NavLink className={classes.navLink} to={'/forPractice'}>forPractice</NavLink>
         </div>
       </footer>

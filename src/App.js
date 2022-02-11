@@ -5,6 +5,7 @@ import { Counter2 } from './components/WithHooks/CountsProjects/Counter2';
 import { ForPractice } from './components/WithHooks/ForPractice/ForPractice';
 import { TodosIndex2 } from './components/WithHooks/TodosProject/TodosIndex2';
 import { TodosIndex } from './components/WithRedux/TodosProject/TodosIndex';
+import { DinamicForms } from './components/WithHooks/dinamicForms/DinamicForms';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/count2' element={<Counter2 />}/>
         <Route path='/todos2' element={<TodosIndex2/>}/>
         <Route path='/forPractice' element={<ForPractice />}/>
+        <Route path='/dinamicForms' element={<DinamicForms />} />
       </Route>
     </Routes>
   );
