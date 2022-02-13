@@ -7,7 +7,7 @@
     display: block;
     margin: 0 auto;
     width: 100%;
-    max-width: 1000px;
+    
 }
 
 .layout h1 {
@@ -29,10 +29,16 @@
     color: #fff;
 }
 
-.navLink:hover {
+.navLink:hover{
     text-decoration: underline;
     color: rgb(32, 110, 173);
 }
+
+.active {
+    text-decoration: underline;
+    color: rgb(32, 110, 173);
+}
+
 
 main {
     background-color: rgb(234, 239, 243);

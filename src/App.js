@@ -6,6 +6,8 @@ import { ForPractice } from './components/WithHooks/ForPractice/ForPractice';
 import { TodosIndex2 } from './components/WithHooks/TodosProject/TodosIndex2';
 import { TodosIndex } from './components/WithRedux/TodosProject/TodosIndex';
 import { DinamicForms } from './components/WithHooks/dinamicForms/DinamicForms';
+import { Auth } from './components/WithRedux/Auth/Auth';
+import { DinamicForms2 } from './components/WithRedux/dinamicForms2/DinamicForms2';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path='/todos2' element={<TodosIndex2/>}/>
         <Route path='/forPractice' element={<ForPractice />}/>
         <Route path='/dinamicForms' element={<DinamicForms />} />
+        <Route path='/dinamicForms2' element={<DinamicForms2 />} />
+        <Route path='/signup' element={<Auth />}/>
       </Route>
     </Routes>
   );
