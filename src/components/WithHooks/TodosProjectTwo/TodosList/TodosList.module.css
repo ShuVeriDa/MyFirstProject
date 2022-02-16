@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.list {
+    width: 220px;
+    background-color: #12343b;
+    border: none;
+    color: #ccc;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 15px;
+}
+
+.list_item {
+    display: flex;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    max-height: 30px;
+}
+
+.button_complete,
+.button_delete,
+.button_edit {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 28px;
+    border-radius: 50%;
+}
+
+.button_complete {
+    color: #ff6c6c;
+    margin-right: 10px;
+}
+
+.button_edit {
+    color: #e2d029;
+    margin-right: 10px;
+}
+
+.button_delete {
+    color: lightseagreen;
+}
