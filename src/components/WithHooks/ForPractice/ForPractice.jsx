@@ -6,18 +6,15 @@ const ForPractice = () => {
   let message
   if (checked) {
     message = <div>
-      <h2>Ура, вам уже есть 18</h2>
-      <p>здесь расположен контент только для взрослых</p>
+      <h2>Текст отображается</h2>
     </div>
   } else {
-    message = <div>
-      <p>Увы, вам еще нет 18:(</p>
-    </div>
+    message = null
   }
  
   return (
     <div className={classes.ForPractice}>
-      <p>"Вам действительно 18 лет?"</p>
+      <p>Отобразить / скрыть текст</p>
       <input type="checkbox" onChange={() => setChecked(!checked)}/>
       {message}
     </div>
