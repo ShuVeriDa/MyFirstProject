@@ -2,12 +2,16 @@ import {useState} from "react"
 import classes from './ForPractice.module.css'
 
 const ForPractice = () => {
-    const [notes, setNotes] = useState([1, 2, 3, 4, 5])
+    const [notes, setNotes] = useState(['a', 'b', 'c', 'd', 'e'])
     const [value, setValue] = useState("")
 
     const result = notes.map((note, index) => {
         return (
-            <p key={index}>{note}</p>
+            <li key={index}>
+                {note}
+                <button onClick={() => remItem(index)}>RemoveNote</button>
+            </li>
+
         )
     })
 
@@ -20,9 +24,15 @@ const ForPractice = () => {
         setValue('')
     }
 
+    const remItem = (index) => {
+        setNotes([...notes.slice(0, index), ...notes.slice(index + 1)])
+    }
+
     return (
-        <div className={classes.ForPractice}>
-            {result}
+        <div className={classes.forPractice}>
+            <ul>
+                {result}
+            </ul>
 
             <input value={value} onChange={handleInput}/>
             <button onClick={addItem}>Add</button>
