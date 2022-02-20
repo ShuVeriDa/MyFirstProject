@@ -2,45 +2,30 @@ import {useState} from "react"
 import classes from './ForPractice.module.css'
 
 const ForPractice = () => {
-    const [value, setValue] = useState('')
+    const [notes, setNotes] = useState([1, 2, 3, 4, 5])
+    const [value, setValue] = useState("")
 
-    const changeHandler = (event) => {
+    const result = notes.map((note, index) => {
+        return (
+            <p key={index}>{note}</p>
+        )
+    })
+
+    const handleInput = (event) => {
         setValue(event.target.value)
+    }
+
+    const addItem = () => {
+        setNotes([...notes, value])
+        setValue('')
     }
 
     return (
         <div className={classes.ForPractice}>
-            <input
-                type="radio"
-                name="radio"
-                value="Python"
-                checked={value === "Python" ? true : false}
-                onChange={changeHandler}
-            />
-            <span>Python</span>
-            <br/>
+            {result}
 
-            <input
-                type="radio"
-                name="radio"
-                value="C++"
-                checked={value === "C++" ? true : false}
-                onChange={changeHandler}
-            />
-            <span>C++</span>
-            <br/>
-
-            <input
-                type="radio"
-                name="radio"
-                value="JS"
-                checked={value === "JS" ? true : false}
-                onChange={changeHandler}
-            />
-            <span>JS</span>
-            <p>
-                {value === "JS" ? "Молодец" : null}
-            </p>
+            <input value={value} onChange={handleInput}/>
+            <button onClick={addItem}>Add</button>
         </div>
     )
 }
