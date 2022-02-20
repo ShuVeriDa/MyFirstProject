@@ -1,24 +1,28 @@
-import { useState } from "react"
+import {useState} from "react"
 import classes from './ForPractice.module.css'
 
 const ForPractice = () => {
-  const [checked, setChecked] = useState(false)
-  let message
-  if (checked) {
-    message = <div>
-      <h2>Текст отображается</h2>
-    </div>
-  } else {
-    message = null
-  }
- 
-  return (
-    <div className={classes.ForPractice}>
-      <p>Отобразить / скрыть текст</p>
-      <input type="checkbox" onChange={() => setChecked(!checked)}/>
-      {message}
-    </div>
-  )
+    const texts = ['Соьлжа-Г1ала', 'Урус-Мартан', 'Гуьмсе', 'Шела']
+    const [value, setValue] = useState("")
+
+    const options = texts.map((text, index) => {
+        return <option key={index} value={index}>{text}</option>
+    })
+
+    const handleChange = (event) => {
+        setValue(event.target.value)
+    }
+
+    return (
+        <div className={classes.ForPractice}>
+            <select value={value} onChange={handleChange}>
+                {options}
+            </select>
+            <p>
+                ваш выбор: {texts[value]}
+            </p>
+        </div>
+    )
 }
 
 export {ForPractice}
