@@ -2,24 +2,44 @@ import {useState} from "react"
 import classes from './ForPractice.module.css'
 
 const ForPractice = () => {
-    const texts = ['Соьлжа-Г1ала', 'Урус-Мартан', 'Гуьмсе', 'Шела']
-    const [value, setValue] = useState("")
+    const [value, setValue] = useState('')
 
-    const options = texts.map((text, index) => {
-        return <option key={index} value={index}>{text}</option>
-    })
-
-    const handleChange = (event) => {
+    const changeHandler = (event) => {
         setValue(event.target.value)
     }
 
     return (
         <div className={classes.ForPractice}>
-            <select value={value} onChange={handleChange}>
-                {options}
-            </select>
+            <input
+                type="radio"
+                name="radio"
+                value="Python"
+                checked={value === "Python" ? true : false}
+                onChange={changeHandler}
+            />
+            <span>Python</span>
+            <br/>
+
+            <input
+                type="radio"
+                name="radio"
+                value="C++"
+                checked={value === "C++" ? true : false}
+                onChange={changeHandler}
+            />
+            <span>C++</span>
+            <br/>
+
+            <input
+                type="radio"
+                name="radio"
+                value="JS"
+                checked={value === "JS" ? true : false}
+                onChange={changeHandler}
+            />
+            <span>JS</span>
             <p>
-                ваш выбор: {texts[value]}
+                {value === "JS" ? "Молодец" : null}
             </p>
         </div>
     )
