@@ -2,39 +2,28 @@ import {useState} from "react"
 import classes from './ForPractice.module.css'
 
 const ForPractice = () => {
-    const [notes, setNotes] = useState([1, 2, 3])
-
-    const getSum = (arr) => {
-        let sum = 0
-
-        for (let elem of arr) {
-            sum += +elem
-        }
-        return sum
-    }
-
-    const changeHandler = (index, event) => {
-        setNotes([...notes.slice(0, index), event.target.value, ...notes.slice(index + 1)])
-    }
+    const [notes, setNotes] = useState(['a', 'b', 'c', 'd', 'e'])
+    const [editNum, setEditNum] = useState(null)
 
     const result = notes.map((note, index) => {
         return (
-            <div>
-                <input
-                    key={index}
-                    value={note}
-                    onChange={(event) => changeHandler(index, event)}
-                />
-            </div>
-
+                <li key={index}>
+                    {note}
+                    <button onClick={() => setEditNum(index)}>Edit</button>
+                </li>
         )
     })
 
+    const changeItem = (event) => {
+        setNotes([...notes.slice(0, editNum), event.target.value, ...notes.slice(editNum + 1)])
+    }
+
     return (
         <div className={classes.forPractice}>
-            {result}
-
-            {getSum(notes)}
+            <ul>
+                {result}
+                <input value={editNum ? notes[editNum] : ''} onChange={changeItem}/>
+            </ul>
         </div>
     )
 }
