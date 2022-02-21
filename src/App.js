@@ -10,6 +10,7 @@ import { Auth } from './components/WithRedux/Auth/Auth';
 import { DinamicForms2 } from './components/WithRedux/dinamicForms2/DinamicForms2';
 import { TodosProjectTwo } from './components/WithHooks/TodosProjectTwo/TodosProjectTwo';
 import {ArrayChange1} from "./components/WithHooks/ArrayChange/ArrayChange1";
+import {ArrayChange2} from "./components/WithHooks/ArrayChange/ArrayChange2";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path='/signup' element={<Auth />} />
         <Route path='/todosTwo' element={<TodosProjectTwo />} />
         <Route path='/arrayChange1' element={<ArrayChange1 />}/>
+        <Route path='/arrayChange2' element={<ArrayChange2 />}/>
       </Route>
     </Routes>
   );

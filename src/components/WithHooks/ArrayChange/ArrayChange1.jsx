@@ -5,24 +5,30 @@ const ArrayChange1 = () => {
     const [editNum, setEditNum] = useState(null)
     const [value, setValue] = useState('')
 
+    //Вывод всех элементов из notes
     const result = notes.map((note, index) => {
         return <p key={index} onClick={() => setEditNum(index)}>{note}</p>
     })
 
+    //Изменение выбранного элемента
     const changeItem = (event) => {
         setNotes([...notes.slice(0, editNum), event.target.value, ...notes.slice(editNum + 1)])
     }
 
+    //Остановка изменения элемента
     const stopEdit = (event) => {
         setEditNum(null)
     }
 
+    //изменение состояния input
     const changeValue = (event) => {
         setValue(event.target.value)
     }
 
+    //добавление нового элемента в массив
     const addItem = (event) => {
         setNotes([...notes, value])
+        setValue('')
     }
 
     let input;
@@ -42,6 +48,7 @@ const ArrayChange1 = () => {
 
     return (
         <div>
+            <h1 style={{color: '#000'}}>ArrayChange1</h1>
             {result}
             {input}
         </div>

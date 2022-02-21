@@ -3,10 +3,9 @@ import classes from './ForPractice.module.css'
 
 const ForPractice = () => {
 
-
     return (
         <div className={classes.forPractice}>
-            dsad
+            ForPractice
         </div>
     )
 }
