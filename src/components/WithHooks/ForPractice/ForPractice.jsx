@@ -12,7 +12,7 @@ const ForPractice = () => {
 
     const startEdit = (index) => {
         setEditNum(index)
-        setValue(notes[editNum])
+        setValue(notes[index])
     }
 
     const changeHandler = (event) => {
@@ -20,19 +20,17 @@ const ForPractice = () => {
 
         if (editNum) {
             setNotes([...notes.slice(0, editNum), event.target.value, ...notes.slice(editNum + 1)])
-        } else {
-            setEditNum(null)
         }
-
-        setValue('')
     }
 
     const blurHandler = (event) => {
         if (!editNum) {
             setNotes([...notes, value])
         } else {
-
+            setEditNum(null)
         }
+
+        setValue('')
     }
 
     return (
