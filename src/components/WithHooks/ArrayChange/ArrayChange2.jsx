@@ -5,31 +5,32 @@ const ArrayChange2 = () => {
     const [editNum, setEditNum] = useState(null)
     const [value, setValue] = useState('')
 
+    //Вывод всех элементов из notes
     const result = notes.map((note, index) => {
         return <p key={index} onClick={() => startEdit(index)}> {note} </p>
     })
 
     const startEdit = (index) => {
-        setEditNum(index)
-        setValue(notes[index])
+        setEditNum(index) // берет index выбранного элемента и передает в editNum
+        setValue(notes[index]) //передает в value выбранный элемент и его index
     }
 
     const changeHandler = (event) => {
-        setValue(event.target.value)
+        setValue(event.target.value) // передает значение этого элемента (поле ввода в нашем примере) в value.
 
-        if (editNum) {
+        if (editNum) {  //Изменение выбранного элемента
             setNotes([...notes.slice(0, editNum), event.target.value, ...notes.slice(editNum + 1)])
         }
     }
 
     const blurHandler = (event) => {
-        if (!editNum) {
-            setNotes([...notes, value])
+        if (!editNum) { // если editNum не равен true
+            setNotes([...notes, value]) // добавление нового элемента
         } else {
-            setEditNum(null)
+            setEditNum(null) // изменение текущего элемента
         }
 
-        setValue('')
+        setValue('') // после добавления / изменения элемента очищаем Input
     }
 
     return (
