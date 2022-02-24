@@ -1,39 +1,29 @@
 import {useState} from "react"
 import classes from './ForPractice.module.css'
 
+const initDate = {
+    year: 2025,
+    month: 12,
+    day: 31,
+}
+
 const ForPractice = () => {
-    const [notes, setNotes] = useState([1, 2, 3, 4, 5])
-    const [editNum, setEditNum] = useState(null)
+   const [date, setDate] = useState(initDate)
 
-    const result = notes.map((note, index) => {
-        return <p key={index} onClick={() => setEditNum(index)}>{note}</p>
-    })
-
-    const editItem = (event) => {
-        setNotes([...notes.slice(0, editNum), event.target.value, ...notes.slice(editNum + 1)])
+    const handleChange = (prop, event) => {
+       setDate({...date, ...{[prop]: event.target.value}})
     }
 
-    const stopEdit = () => {
-        setEditNum(null)
-    }
-
-    const createItem = () => {
-        if (!editNum) {
-            const res = [...notes, '']
-            setNotes(res)
-            setEditNum(res.length - 1)
-        }
-    }
 
     return (
         <div className={classes.forPractice}>
-            {result}
-            <input
-                value={editNum ? notes[editNum] : ''}
-                onChange={editItem}
-                onBlur={stopEdit}
-                onFocus={createItem}
-            />
+            <input value={date.year} onChange={event => handleChange('year', event)}/>
+            <br/>
+            <input value={date.month} onChange={event => handleChange('month', event)}/>
+            <br/>
+            <input value={date.day} onChange={event => handleChange('day', event)}/>
+            <br/>
+            {date.year}.{date.month}.{date.day}
         </div>
     )
 }

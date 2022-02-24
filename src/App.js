@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Counter } from './components/WithRedux/CountsProjects/Counter';
 import { Layout } from './components/Layout/Layout';
 import { Counter2 } from './components/WithHooks/CountsProjects/Counter2';
-import { ForPractice } from './components/WithHooks/ForPractice/ForPractice';
+
 import { TodosIndex2 } from './components/WithHooks/TodosProject/TodosIndex2';
 import { TodosIndex } from './components/WithRedux/TodosProject/TodosIndex';
 import { DinamicForms } from './components/WithHooks/dinamicForms/DinamicForms';
@@ -12,6 +12,8 @@ import { TodosProjectTwo } from './components/WithHooks/TodosProjectTwo/TodosPro
 import {ArrayChange1} from "./components/WithHooks/ArrayChange/ArrayChange1";
 import {ArrayChange2} from "./components/WithHooks/ArrayChange/ArrayChange2";
 import {ArrayChange3} from "./components/WithHooks/ArrayChange/ArrayChange3";
+import {ForPractice} from "./components/WithHooks/ForPractice/ForPractice";
+
 
 function App() {
   return (
